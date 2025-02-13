@@ -80,6 +80,41 @@
             
         </script>
         <button onclick="threesum()">Result is</button>
+        <p>===================================================</p>
+
+        <h1>Exercise 04</h1>
+
+        <p>Enter number in Box A</p>
+        <input type="number" id="d">
+
+        <p>Enter number in Box B</p>
+        <input type="number" id="e">
+
+        <p>Enter number in Box L</p>
+        <input type="number" id="l">
+
+        <script>
+            function f4(d, e, l) {
+                let sum = 0;
+
+                for(let i=0; i < l.length; i++) {
+                    if(l[i] % d == 0 || l[i] % e == 0) {
+                        sum += l[i];
+                    }
+                }
+                return sum;
+            }
+            function onclick() {
+                let d= parseInt(document.getElementById("d").value);
+                let e= parseInt(document.getElementById("e").value);
+                let l= parseInt(document.getElementById("l").value.split(",").map(Number));
+
+                let Result = f4(d, e, l);
+
+                alert("The sum of multiples of " +d+ " or " +e+ " array is " +Result);
+            }
+        </script>
+        <button onclick="onclick()">Sum is</button>
 
     </body>
 
