@@ -26,21 +26,21 @@
 
          <h1>Exercise 02</h1>
          function sum(){
-            let natural=document.getElementById('natural').value;
-            natural=parseInt(natural);
+            let number=document.getElementById('number').value;
+            number=parseInt(number);
 
             let a=0;
-            for(let i=0; i<natural; i++){
+            for(let i=0; i<number; i++){
                 if(i%3==0 || i%5==0){
                     a+=i;
                 }
             }
-            alert("The sum of multiples of 3 or 5" +natural+ "is:" +a);
+            alert("The sum of multiples of 3 or 5" +number+ "is:" +a);
          }
 
         </script>
         <p>Enter Number</p>
-        <input type="number" id="natural">
+        <input type="number" id="number">
         <button onclick="sum()">Get Answer</button>
 
 
